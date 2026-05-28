@@ -215,12 +215,12 @@ export default function Home() {
             </form>
           )}
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 pt-12 border-t border-gray-800 text-sm text-gray-400">
-            <a href="mailto:hello@webhavnagar.com" className="flex items-center gap-2 hover:text-white transition-colors">
-              📧 hello@webhavnagar.com
+<div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 pt-12 border-t border-gray-800 text-sm text-gray-400">
+            <a href="mailto:contact@webhavnagar.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              📧 contact@webhavnagar.com
             </a>
-            <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-white transition-colors">
-              📱 +91 98765 43210
+            <a href="tel:+918866518666" className="flex items-center gap-2 hover:text-white transition-colors">
+              📱 +91 88665 18666
             </a>
           </div>
         </div>
