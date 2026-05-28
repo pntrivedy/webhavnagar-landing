@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WebHavnagar — Premium Web Solutions for Bhavnagar & Beyond",
+  title: "WeBhavnagar — Premium Web Solutions for Bhavnagar & Beyond",
   description: "Built by Bhavnagaris, for Bhavnagar. Premium web design & development for Havnagar businesses. Fast, beautiful websites that convert.",
   keywords: ["web design", "Bhavnagar", "Havnagar", "Gujarat", "website development", "Next.js"],
   openGraph: {
-    title: "WebHavnagar — Premium Web Solutions",
+    title: "WeBhavnagar — Premium Web Solutions",
     description: "Built by Bhavnagaris, for Bhavnagar.",
     url: "https://webhavnagar.com",
-    siteName: "WebHavnagar",
+    siteName: "WeBhavnagar",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "WebHavnagar",
+    title: "WeBhavnagar",
     description: "Built by Bhavnagaris, for Bhavnagar.",
     creator: "@WeBhavnagar",
   },

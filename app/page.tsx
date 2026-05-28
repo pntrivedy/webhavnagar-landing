@@ -65,8 +65,8 @@ export default function Home() {
       {/* Nav */}
       <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
         <div className="flex items-center gap-3">
-          <Image src="/logo.jpg" alt="WebHavnagar Logo" width={36} height={36} className="rounded-full" />
-          <span className="font-bold text-xl tracking-tight text-gray-900">WebHavnagar</span>
+          <Image src="/logo.jpg" alt="WeBhavnagar Logo" width={36} height={36} className="rounded-full" />
+          <span className="font-bold text-xl tracking-tight text-gray-900">WeBhavnagar</span>
         </div>
         <div className="hidden md:flex gap-6 text-sm font-medium text-gray-600">
           <a href="#services" className="hover:text-gray-900 transition-colors">Services</a>
@@ -134,7 +134,7 @@ export default function Home() {
             Built by Bhavnagaris,<br />Competing Globally
           </h2>
           <p className="text-gray-600 text-center text-lg mb-16">
-            We started WebHavnagar with one mission: bring world-class web technology to businesses in our hometown. No more paying inflated prices for mediocre websites.
+            We started WeBhavnagar with one mission: bring world-class web technology to businesses in our hometown. No more paying inflated prices for mediocre websites.
           </p>
           <p className="text-gray-600 text-center text-lg mb-16">
             Today, we build everything from local business landing pages to full-scale web applications — using the same tools and frameworks as the best agencies in the world, at a fraction of the cost.
@@ -228,7 +228,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-950 text-gray-500 text-sm py-6 px-6 text-center">
-        <p>© {new Date().getFullYear()} WebHavnagar. Built with ❤️ in Bhavnagar, Gujarat.</p>
+        <p>© {new Date().getFullYear()} WeBhavnagar. Built with ❤️ in Bhavnagar, Gujarat.</p>
       </footer>
     </div>
   );
