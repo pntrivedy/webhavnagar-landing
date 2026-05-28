@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WeBhavnagar — Premium Web Solutions for Bhavnagar & Beyond",
-  description: "Built by Bhavnagaris, for Bhavnagar. Premium web design & development for Havnagar businesses. Fast, beautiful websites that convert.",
-  keywords: ["web design", "Bhavnagar", "Havnagar", "Gujarat", "website development", "Next.js"],
+  title: "WeBhavnagar — AI & Digital Solutions for Gujarat Businesses",
+  description: "Your Digital Partner for Sustainable Business Growth. AI automation, websites, CRM, WhatsApp Business — everything your business needs in one place.",
+  keywords: ["AI automation Gujarat", "digital solutions Bhavnagar", "WhatsApp Business API Gujarat", "CRM for small business", "website development Gujarat"],
   openGraph: {
-    title: "WeBhavnagar — Premium Web Solutions",
-    description: "Built by Bhavnagaris, for Bhavnagar.",
+    title: "WeBhavnagar — AI & Digital Solutions",
+    description: "Your Digital Partner for Sustainable Business Growth in Gujarat.",
     url: "https://webhavnagar.com",
     siteName: "WeBhavnagar",
     locale: "en_IN",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "WeBhavnagar",
-    description: "Built by Bhavnagaris, for Bhavnagar.",
+    description: "AI & Digital Solutions for Gujarat Businesses.",
     creator: "@WeBhavnagar",
   },
 };

@@ -5,48 +5,48 @@ import { useState } from 'react';
 
 const SERVICES = [
   {
-    emoji: '🎨',
-    title: 'Website Design',
-    description: 'Custom, conversion-focused designs that reflect your brand and engage your customers.',
-    tags: ['UI/UX Design', 'Responsive', 'Brand Identity'],
+    emoji: '🤖',
+    title: 'AI & Automation',
+    description: 'Auto-respond to WhatsApp, generate quotes, follow up leads — while you sleep.',
+    tags: ['ChatGPT', 'WhatsApp API', 'Lead Automation'],
   },
   {
-    emoji: '⚡',
-    title: 'Web Development',
-    description: 'Fast, scalable websites built with modern tech. Landing pages to full web apps.',
-    tags: ['Next.js', 'React', 'Performance'],
+    emoji: '🌐',
+    title: 'Websites & Apps',
+    description: 'Modern, fast websites that load in 2 seconds and rank on Google.',
+    tags: ['Next.js', 'React', 'SEO Optimized'],
+  },
+  {
+    emoji: '📊',
+    title: 'CRM & Systems',
+    description: 'Organize your customers, inventory, and orders in one place — finally.',
+    tags: ['Database', 'Automation', 'Reporting'],
   },
   {
     emoji: '📱',
-    title: 'Mobile Friendly',
-    description: 'Every site looks and works flawlessly on phones, tablets, and desktops.',
-    tags: ['Responsive', 'MobileFirst', 'All Devices'],
+    title: 'WhatsApp Business',
+    description: 'Automate orders, catalogue sharing, and customer support on WhatsApp.',
+    tags: ['Business API', 'Auto-Replies', 'Orders'],
+  },
+  {
+    emoji: '📍',
+    title: 'Google & Social',
+    description: 'Get found on Google Maps, manage reviews, and run targeted ads.',
+    tags: ['Google Business', 'Meta Ads', 'Local SEO'],
   },
   {
     emoji: '🔒',
-    title: 'SSL & Security',
-    description: 'HTTPS encryption, secure forms, and protection against threats.',
-    tags: ['SSL Certificates', 'Security', 'Privacy'],
-  },
-  {
-    emoji: '🚀',
-    title: 'Hosting & Deploy',
-    description: 'Reliable, fast hosting with 99.9% uptime. No more crashes or downtime.',
-    tags: ['Cloud Hosting', 'CDN', 'Fast Loading'],
-  },
-  {
-    emoji: '📈',
-    title: 'SEO & Growth',
-    description: 'Get found on Google. Technical SEO, local optimization, and analytics setup.',
-    tags: ['SEO', 'Google Analytics', 'Local SEO'],
+    title: 'Data & Security',
+    description: 'Secure your business data, automate backups, and protect against losses.',
+    tags: ['Cloud Backup', 'SSL', 'Access Control'],
   },
 ];
 
 const STATS = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '5★', label: 'Client Rating' },
-  { value: '24h', label: 'Response Time' },
-  { value: '100%', label: 'Satisfaction' },
+  { value: '500+', label: 'Processes Automated' },
+  { value: '24/7', label: 'AI-Powered Systems' },
+  { value: '98%', label: 'Accuracy Rate' },
+  { value: '3x', label: 'Efficiency Gain' },
 ];
 
 export default function Home() {
@@ -56,7 +56,6 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate form submit
     setTimeout(() => setStatus('sent'), 1500);
   };
 
@@ -79,17 +78,24 @@ export default function Home() {
       <section className="px-6 py-20 md:py-32 max-w-6xl mx-auto text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-red-600 mb-4">Bhavnagar, Gujarat</p>
         <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-6">
-          Your Business Deserves a Website That Works
+          Your Competitors Are<br className="hidden md:block" /> Already Automating.<br className="hidden md:block" /> Are You?
         </h1>
+        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+          Manual data entry. Missed follow-ups. Orders lost in WhatsApp chats.<br />
+          Human errors that cost you customers and credibility.
+        </p>
+        <p className="text-lg md:text-xl font-semibold text-gray-900 max-w-2xl mx-auto mb-4">
+          We fix that.
+        </p>
         <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-          Premium web design & development for Havnagar businesses. From local shops to startups — we build fast, beautiful websites that convert.
+          WeBhavnagar helps Gujarat businesses leverage AI, automation, and modern technology to eliminate repetitive work, reduce mistakes, and build systems that scale — without burning out your team.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#contact" className="px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
-            Start a Project →
+            Get Your Free Digital Audit →
           </a>
-          <a href="#about" className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
-            See Our Work
+          <a href="#services" className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+            See How We Can Help
           </a>
         </div>
 
@@ -108,7 +114,10 @@ export default function Home() {
       <section id="services" className="bg-gray-50 py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <p className="text-center text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4">What We Do</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Everything Your Business Needs Online</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">One Partner. Every Digital Solution.</h2>
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-16">
+            Whether you run a manufacturing unit in Bhavnagar, a retail shop in Surat, or a service business across Gujarat — we build the digital foundation your business deserves.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s) => (
               <div key={s.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -131,22 +140,27 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4">About Us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            Built by Bhavnagaris,<br />Competing Globally
+            We&apos;re Not Just Developers.<br />We&apos;re Your Digital Partner.
           </h2>
-          <p className="text-gray-600 text-center text-lg mb-16">
-            We started WeBhavnagar with one mission: bring world-class web technology to businesses in our hometown. No more paying inflated prices for mediocre websites.
+          <p className="text-gray-600 text-center text-lg mb-6">
+            Every business owner we meet says the same thing: <span className="font-semibold text-gray-900">&ldquo;I spend more time managing work than doing business.&rdquo;</span>
+          </p>
+          <p className="text-gray-600 text-center text-lg mb-6">
+            Manual phone calls. Tracking orders on paper. Forgetting to follow up with leads. Customers who slip through the cracks.
           </p>
           <p className="text-gray-600 text-center text-lg mb-16">
-            Today, we build everything from local business landing pages to full-scale web applications — using the same tools and frameworks as the best agencies in the world, at a fraction of the cost.
+            We started WeBhavnagar to solve this — not just build websites, but build systems that actually reduce your workload. We combine AI tools, automation workflows, and modern software to handle the repetitive work your team shouldn&apos;t be doing.
           </p>
+
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { title: 'Modern Stack', desc: 'Next.js, React, TypeScript — built for speed and scale.' },
-              { title: 'Global Standards', desc: 'Design and code that meets Silicon Valley benchmarks.' },
-              { title: 'Local Understanding', desc: 'We know Havnagar. We know Gujarat. We know India.' },
-              { title: 'Transparent Pricing', desc: 'No hidden fees, no surprise invoices. Clear quotes upfront.' },
+              { emoji: '⚡', title: 'Speed', desc: 'Systems that respond in seconds, not hours.' },
+              { emoji: '🧠', title: 'Intelligence', desc: 'AI that learns your business, not just generic responses.' },
+              { emoji: '🔄', title: 'Automation', desc: 'Workflows that run 24/7 without reminders.' },
+              { emoji: '📈', title: 'Growth', desc: 'Data that helps you make better decisions every day.' },
             ].map((item) => (
               <div key={item.title} className="p-6 border border-gray-200 rounded-xl">
+                <div className="text-2xl mb-2">{item.emoji}</div>
                 <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
@@ -159,16 +173,17 @@ export default function Home() {
       <section id="contact" className="bg-gray-900 text-white py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <p className="text-center text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Let's Build Something Great</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Let&apos;s Fix Your Business Systems</h2>
           <p className="text-gray-400 text-center mb-12">
-            Have a project in mind? Tell us about it and we'll get back to you within 24 hours with a free consultation and quote.
+            Book a free 30-minute consultation. We&apos;ll audit your current digital setup — websites, WhatsApp, CRM, automation — and show you exactly what&apos;s costing you time and money.<br />
+            <span className="text-white font-semibold">No sales pitch. Just honest advice.</span>
           </p>
 
           {status === 'sent' ? (
             <div className="text-center py-12">
               <div className="text-4xl mb-4">✅</div>
               <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-              <p className="text-gray-400">We'll get back to you within 24 hours.</p>
+              <p className="text-gray-400">We&apos;ll get back to you within 24 hours.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
@@ -210,12 +225,12 @@ export default function Home() {
                 disabled={status === 'sending'}
                 className="w-full px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors disabled:opacity-50"
               >
-                {status === 'sending' ? 'Sending...' : 'Send Message →'}
+                {status === 'sending' ? 'Sending...' : 'Book Free Consultation →'}
               </button>
             </form>
           )}
 
-<div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 pt-12 border-t border-gray-800 text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-12 pt-12 border-t border-gray-800 text-sm text-gray-400">
             <a href="mailto:contact@webhavnagar.com" className="flex items-center gap-2 hover:text-white transition-colors">
               📧 contact@webhavnagar.com
             </a>
@@ -228,7 +243,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-950 text-gray-500 text-sm py-6 px-6 text-center">
-        <p>© {new Date().getFullYear()} WeBhavnagar. Built with ❤️ in Bhavnagar, Gujarat.</p>
+        <p>© {new Date().getFullYear()} WeBhavnagar. Powering Sustainable Business Growth in Gujarat.</p>
       </footer>
     </div>
   );
