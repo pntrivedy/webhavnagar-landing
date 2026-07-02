@@ -102,24 +102,8 @@ function EmailSignupForm({ variant }: { variant: 'banner' | 'hero' }) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Coming Soon Banner */}
-      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-2 px-2.5 py-1 bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-widest rounded">
-              <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-              Coming Soon
-            </span>
-            <p className="text-sm md:text-base text-white/90">
-              We&apos;re rebuilding WeBhavnagar. Something better is on the way.
-            </p>
-          </div>
-          <EmailSignupForm variant="banner" />
-        </div>
-      </div>
-
       {/* Fixed centered overlay card — stays on screen while scrolling */}
-      <div className="fixed inset-0 z-40 flex items-start justify-center pt-24 md:pt-32 px-6 pointer-events-none bg-gray-900/30 backdrop-blur-[1px]">
+      <div className="fixed inset-0 z-40 flex items-start justify-center pt-12 md:pt-20 px-6 pointer-events-none bg-gray-900/30 backdrop-blur-[1px]">
         <div className="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-8 md:p-10 text-center pointer-events-auto border border-gray-100">
           <Image
             src="/logo.jpg"
