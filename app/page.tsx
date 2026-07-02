@@ -118,9 +118,40 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Fixed centered overlay card — stays on screen while scrolling */}
+      <div className="fixed inset-0 z-40 flex items-start justify-center pt-24 md:pt-32 px-6 pointer-events-none bg-gray-900/30 backdrop-blur-[1px]">
+        <div className="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-8 md:p-10 text-center pointer-events-auto border border-gray-100">
+          <Image
+            src="/logo.jpg"
+            alt="WeBhavnagar Logo"
+            width={64}
+            height={64}
+            className="rounded-full mx-auto mb-5"
+          />
+          <p className="text-xs font-bold uppercase tracking-widest text-red-600 mb-3">
+            AI & Digital Solutions for Gujarat Businesses
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            We&apos;re Rebuilding.
+          </h2>
+          <p className="text-gray-600 mb-6">
+            A new website is on the way. Drop your email and we&apos;ll let you know the moment we go live.
+          </p>
+          <EmailSignupForm variant="hero" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100 text-sm text-gray-500">
+            <a href="mailto:contact@webhavnagar.com" className="hover:text-gray-900 transition-colors">
+              📧 contact@webhavnagar.com
+            </a>
+            <span className="hidden md:inline text-gray-300">|</span>
+            <a href="tel:+918****8666" className="hover:text-gray-900 transition-colors">
+              📱 +91 88665 18666
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Dimmed existing site */}
-      <div className="relative">
-        <div className="pointer-events-none select-none opacity-40 grayscale">
+      <div className="pointer-events-none select-none opacity-40 grayscale">
           {/* Nav */}
           <nav className="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto">
             <div className="flex items-center gap-3">
@@ -215,40 +246,7 @@ export default function Home() {
           </section>
         </div>
 
-        {/* Centered overlay card with email signup */}
-        <div className="absolute inset-0 flex items-start justify-center pt-20 md:pt-32 px-6 pointer-events-none">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-8 md:p-10 text-center pointer-events-auto border border-gray-100">
-            <Image
-              src="/logo.jpg"
-              alt="WeBhavnagar Logo"
-              width={64}
-              height={64}
-              className="rounded-full mx-auto mb-5"
-            />
-            <p className="text-xs font-bold uppercase tracking-widest text-red-600 mb-3">
-              AI & Digital Solutions for Gujarat Businesses
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              We&apos;re Rebuilding.
-            </h2>
-            <p className="text-gray-600 mb-6">
-              A new website is on the way. Drop your email and we&apos;ll let you know the moment we go live.
-            </p>
-            <EmailSignupForm variant="hero" />
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100 text-sm text-gray-500">
-              <a href="mailto:contact@webhavnagar.com" className="hover:text-gray-900 transition-colors">
-                📧 contact@webhavnagar.com
-              </a>
-              <span className="hidden md:inline text-gray-300">|</span>
-              <a href="tel:+918866518666" className="hover:text-gray-900 transition-colors">
-                📱 +91 88665 18666
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
+        {/* Footer */}
       <footer className="bg-gray-950 text-gray-500 text-sm py-6 px-6 text-center">
         <p>© {new Date().getFullYear()} WeBhavnagar. Powering Sustainable Business Growth in Gujarat.</p>
       </footer>
