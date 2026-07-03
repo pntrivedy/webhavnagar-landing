@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 
 const SERVICES = [
   {
@@ -49,56 +46,6 @@ const STATS = [
   { value: '3x', label: 'Efficiency Gain' },
 ];
 
-function EmailSignupForm({ variant }: { variant: 'banner' | 'hero' }) {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('sending');
-    // Simulate submission
-    setTimeout(() => setStatus('sent'), 1200);
-  };
-
-  const isBanner = variant === 'banner';
-  const inputBase = isBanner
-    ? 'w-full sm:w-72 px-4 py-2.5 bg-white/10 border border-white/30 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-white text-sm'
-    : 'w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-900 transition-colors';
-  const buttonBase = isBanner
-    ? 'w-full sm:w-auto px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-sm whitespace-nowrap disabled:opacity-60'
-    : 'w-full px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50';
-
-  if (status === 'sent') {
-    return (
-      <div className={isBanner ? 'text-white text-sm py-1' : 'text-center py-4'}>
-        <p className={isBanner ? 'font-semibold' : 'text-lg font-semibold text-gray-900'}>
-          ✅ You&apos;re on the list.
-        </p>
-        {!isBanner && (
-          <p className="text-gray-600 text-sm mt-1">We&apos;ll email you when we launch.</p>
-        )}
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className={isBanner ? 'flex flex-col sm:flex-row gap-2' : 'space-y-3'}>
-      <input
-        type="email"
-        placeholder="your@email.com"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className={inputBase}
-        aria-label="Email address"
-      />
-      <button type="submit" disabled={status === 'sending'} className={buttonBase}>
-        {status === 'sending' ? 'Joining...' : 'Notify Me'}
-      </button>
-    </form>
-  );
-}
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -119,9 +66,8 @@ export default function Home() {
             We&apos;re Rebuilding.
           </h2>
           <p className="text-gray-600 mb-6">
-            A new website is on the way. Drop your email and we&apos;ll let you know the moment we go live.
+            We&apos;re rebuilding. Something better is on the way.
           </p>
-          <EmailSignupForm variant="hero" />
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6 pt-6 border-t border-gray-100 text-sm text-gray-500">
             <a href="mailto:contact@webhavnagar.com" className="hover:text-gray-900 transition-colors">
               📧 contact@webhavnagar.com
